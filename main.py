@@ -1,7 +1,7 @@
-from flask import Flask
+from website import create_app
 
 def run_app():
-    print("just helping some students here!")
+    create_app()
 
 
 if __name__ == "__main__":
