@@ -16,12 +16,11 @@ With InternBridge, students can:
 We understand how overwhelming the internship hunt can feel. Our mission is to simplify the process and provide you with the tools and guidance you need to succeed. InternBridge is your ultimate partner in unlocking opportunities and shaping your future.
 
 
-/Intern_Bridge_app/
+Intern_Bridge_app/
 ├── main.py               # Main application file
-├── website/              # Static files (CSS, JavaScript, images)
-│   ├── __init__.py
+├── website/              # Website package
+│   ├── __init__.py       # Note: Use double underscores
 │   ├── views.py
 │   ├── templates/        # HTML templates
 │   │   └── base.html
-│   └── static/           # JavaScript files
-
+│   └── static/           # Static files (CSS, JavaScript, images)
