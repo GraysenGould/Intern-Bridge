@@ -1,7 +1,12 @@
 from flask import Flask
 
-app = Flask(__name__)
 
 
 def create_app():
-    print("Nothing here yet!")
+    app = Flask(__name__)
+
+    from .views import views
+
+    app.register_blueprint(views, url_prefix = "/")
+
+    return app
