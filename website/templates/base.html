@@ -11,33 +11,34 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
         crossorigin="anonymous"
     />
-
+    <link rel = "stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">BrandName</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
+    <nav class = "navbar navbar-expand-lg navbar-light cust-nav">
+        <div class = "container-fluid">
+          <a class="navbar-brand" href="#">Intern Bridge</a>
+          <button class="navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navbarNav">
+            <span class = "navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id = "navbarNav">
+            <ul class = "navbar-nav" id = "navbarNav">
+              <li class = "nav-item">
+                <a class = "nav-link active" href = "#">link</a>
+              </li>
+              <li class = "nav-item">
+                <a class = "nav-link" href = "#">About</a>
+              </li>
+              <li class = "nav-item">
+                <a class = "nav-link" href = "#">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </nav>    
+
+    </nav>
       
     <h1>This is the Home Page</h1>
     <script 
