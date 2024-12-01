@@ -7,6 +7,8 @@ def home():
     return render_template("home.html")
 
 
-@views.route("/interview",methods = ["GET"])
+@views.route("/interview",methods = ["GET", "POST"])
 def interview():
+    if request.method == "POST":
+        print("Forms posted to backend")
     return render_template("interview.html")
