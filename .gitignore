@@ -1,1 +1,4 @@
 *.code-workspace
+test.py
+secrets.py
+*.env
