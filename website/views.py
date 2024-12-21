@@ -29,8 +29,6 @@ def interview_questions():
 
     job_description = session.get("jobDescriptionInput")
     resume_info = session.get("resumeInput")
-
-
     response = ai_response.generate_interview_questions(job_description, resume_info)
 
     return render_template("interview-questions.html",response = response)
