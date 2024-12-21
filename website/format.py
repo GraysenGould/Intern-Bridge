@@ -8,5 +8,9 @@ def format_response(response):
             lines.append(response[prev:i])
             prev = i + 1
     #print(lines)
-    new_response = "<br/>".join(lines)
+    lines = [x for x in lines if x != ""] # get rid of empty elements
+    new_response = {"greeting": lines[0], "questions": lines[1:]}
     return new_response
+
+
+#print(format_response(sample))

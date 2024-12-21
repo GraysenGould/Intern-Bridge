@@ -10,7 +10,13 @@
             <h1>Your Tailored Interview Questions</h1>
         </div>
     </div>
-    <p>Questions: {{response}}</p>
+    
+    <h3>{{response["greeting"]}}</h3>
+    <ul>
+        {% for item in response["questions"] %}
+            <li>{{item}}</li>
+        {% endfor %}
+    </ul>
 
 
 

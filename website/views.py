@@ -48,6 +48,7 @@ def interview_questions():
     response = completion.choices[0].message.content
 
     new_response = format_response(response)
+
     #print(job_description, resume_info)
 
     return render_template("interview-questions.html",response = new_response)
