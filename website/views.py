@@ -26,7 +26,10 @@ def interview():
 
 @views.route("/interview-questions",methods = ["GET", "POST"])
 def interview_questions():
-
+    if request.method == "POST":
+        print("Got Posted lol")
+    if request.method == "GET":
+        print("Got GETed lol")    
     job_description = session.get("jobDescriptionInput")
     resume_info = session.get("resumeInput")
     response = ai_response.generate_interview_questions(job_description, resume_info)

@@ -12,7 +12,8 @@
     </div>
     
     <h3>{{response["greeting"]}}</h3>
-    <button>Lets get started </button>
+    <button type = "button" class = "btn btn-primary" href = "/interview-questions">Get Started</button>
+    <a href="/interview-questions" class="btn btn-primary">Reload Questions</a>
     <ul>
         {% for item in response["questions"] %}
             <li>{{item}}</li>
