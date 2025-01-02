@@ -1,4 +1,4 @@
-from flask import Flask, Blueprint, render_template, request, redirect, url_for, session
+from flask import Flask, Blueprint, render_template, request, redirect, url_for, session, jsonify
 import os
 from openai import OpenAI
 views = Blueprint("views", __name__)
@@ -24,14 +24,18 @@ def interview():
     return render_template("interview.html")
 
 
-@views.route("/interview-questions",methods = ["GET", "POST"])
+@views.route("/interview-questions",methods = ["GET"])
 def interview_questions():
-    if request.method == "POST":
-        print("Got Posted lol")
-    if request.method == "GET":
-        print("Got GETed lol")    
+
     job_description = session.get("jobDescriptionInput")
     resume_info = session.get("resumeInput")
     response = ai_response.generate_interview_questions(job_description, resume_info)
 
     return render_template("interview-questions.html",response = response)
+
+
+@views.route("/interview-questions", methods = ["POST"])
+def update_interview_questons():
+    print("Posting lol")
+    pass
+
